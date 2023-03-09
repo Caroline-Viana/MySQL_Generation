@@ -19,3 +19,13 @@ SET SQL_SAFE_UPDATES = 0;
 
 -- atualização de um dado dentro da tabela
 UPDATE tb_produtos SET preco = 5.00 WHERE id = 3;
+-- Adicionando a nova coluna
+ALTER TABLE tb_produtos ADD categoria_id BIGINT;
+-- Adicionando a constraint
+ALTER TABLE tb_produtos ADD CONSTRAINT fk_produtos_categorias 
+FOREIGN KEY (categoria_id) REFERENCES tb_categoria(id);
+
+INSERT INTO tb_produtos(nome_produto, preco, categoria_id) 
+VALUES ("Pitaya", 15.00, 1),
+("Agrião", 3.00, 2),
+("Cenoura", 3.50, 3);
