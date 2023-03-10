@@ -25,6 +25,7 @@ VALUES ("Freya", 750, 800, 980, 2),
 
 SELECT * FROM tb_personagens;
 SELECT * FROM tb_personagens WHERE level_forca > 500;
+SELECT * FROM tb_personagens WHERE classes_id = 2;
 SELECT * FROM tb_personagens WHERE level_habilidade BETWEEN 600 AND 800;
 SELECT * FROM tb_personagens WHERE nome LIKE "%r%";
 SELECT nome, level_forca, level_habilidade, level_magia, classes_id FROM tb_personagens
